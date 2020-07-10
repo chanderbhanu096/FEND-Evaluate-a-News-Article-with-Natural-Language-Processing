@@ -1,4 +1,4 @@
-import { checkForName } from '../client/js/nameChecker'
+import { checkForName,checkForUserInput } from '../client/js/nameChecker'
 describe('check for url',()=>{
     test('it should filter the urls',()=>
     {
@@ -7,4 +7,12 @@ describe('check for url',()=>{
         const idValid=regexp.test(input);
         expect(idValid).toBe(true);                                               
     });
+});
+describe('Check user input', () => {
+    test('text', () => {
+        expect(checkForUserInput('hello there')).toEqual(true);
+      });
+      test('empty', () => {
+          expect(checkForUserInput('', false)).toEqual(false);
+        });
 });

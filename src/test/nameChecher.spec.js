@@ -10,7 +10,7 @@ describe('check for url',()=>{
 });
 describe('Check user input', () => {
     test('text', () => {
-        expect(checkForUserInput('hello there')).toEqual(true);
+        expect(checkForUserInput('test works')).toEqual(true);
       });
       test('empty', () => {
           expect(checkForUserInput('', false)).toEqual(false);
